@@ -1,0 +1,45 @@
+{
+  "name": "flat-map",
+  "version": "0.0.0",
+  "description": "An implementation of `Array.prototype.flatMap` as specified by Brian Terlson in https://github.com/bterlson/proposal-flatMap",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test",
+    "watch": "npm run babel --watch ./src/**.js --out-dir ./dist",
+    "babel": "babel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aluanhaddad/flat-map.git"
+  },
+  "author": "aluanh@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aluanhaddad/flat-map/issues"
+  },
+  "homepage": "https://github.com/aluanhaddad/flat-map#readme",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-rules-strict": "^1.0.0",
+    "babel-cli": "^6.24.1",
+    "babel-preset-esnext": "^1.1.3",
+    "tape": "^4.6.3"
+  },
+  "keywords": [
+    "flat-map",
+    "array",
+    "map",
+    "flatten",
+    "concatenate",
+    "project",
+    "combinators",
+    "query",
+    "esnext"
+  ],
+  "dependencies": {
+    "proposal-flatmap": "git+https://github.com/bterlson/proposal-flatMap.git"
+  }
+}

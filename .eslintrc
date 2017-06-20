@@ -31,6 +31,7 @@
     "constructor-super": "warn",
     "valid-typeof": "warn",
     "prefer-const": "warn",
+    "semi": "error",
     "strict": "error"
   }
 }

@@ -11,3 +11,19 @@ test('flatMap must apply the specified projection to each element of the resulin
   deepEqual(actual, expected);
   end();
 });
+
+test('flatMap must raise a `TypeError` exception if no callback is specified', ({throws, end}) => {
+  throws(() => {
+    [].flatMap();
+  }, TypeError);
+
+  end();
+});
+
+test('flatMap must raise a `TypeError` exception if callback is not callable', ({throws, end}) => {
+  throws(() => {
+    [].flatMap({});
+  }, TypeError);
+
+  end();
+});

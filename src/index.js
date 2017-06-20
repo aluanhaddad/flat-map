@@ -14,8 +14,8 @@ export default function flatMap(callbackFn, thisArg) {
   flattenIntoArray(
     a,
     o,
-     /*start*/ 0,
-      /*depth*/ 1,
+    /*start*/ 0,
+    /*depth*/ 1,
     callbackFn,
     t);
   return a.filter(x => x !== undefined);

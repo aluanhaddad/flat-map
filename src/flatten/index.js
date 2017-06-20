@@ -2,7 +2,7 @@ import arraySpeciesCreate from '../array-species-create';
 import flattenIntoArray from '../flatten-into-array';
 
 /**
- * @param {number} depth 
+ * @param {number} depth
  */
 export default function flatten(depth) {
   const o = Object(this);

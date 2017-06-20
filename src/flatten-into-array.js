@@ -8,20 +8,11 @@
  * @returns {number}
  */
 export default function flattenIntoArray(target, source, start, depth, mapperFunction, thisArg) {
-  console.info({target, source, start, depth, mapperFunction, thisArg});
-  console.info({
-    target: typeof target,
-    source: typeof source,
-    start: typeof start,
-    depth: typeof depth,
-    mapperFunction: typeof mapperFunction,
-    thisArg: typeof thisArg
-  });
+
   const mapperFunctionProvied = mapperFunction !== undefined;
   let targetIndex = start;
   let sourceIndex = 0;
   const sourceLen = source.length;
-  console.info({targetIndex, sourceIndex, sourceLen});
   while (sourceIndex < sourceLen) {
     const p = sourceIndex;
     const exists = !!source[p];
@@ -32,7 +23,6 @@ export default function flattenIntoArray(target, source, start, depth, mapperFun
           element = mapperFunction.call(thisArg, element, sourceIndex, target);
         }
         const spreadable = Object.getOwnPropertySymbols(element).includes(Symbol.isConcatSpreadable) || Array.isArray(element);
-        console.info({element, spreadable});
         if (spreadable === true && depth >= 0) {
           const nextIndex = flattenIntoArray(target, element, targetIndex, depth - 1);
           targetIndex = nextIndex;

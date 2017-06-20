@@ -1,4 +1,10 @@
 // Place your settings in this file to overwrite default and user settings.
 {
-  "eslint.autoFixOnSave": true
+  "eslint.autoFixOnSave": true,
+  "triggerTaskOnSave.on": true,
+  "triggerTaskOnSave.tasks": {
+    "test": [
+      "test/**.js"
+    ]
+  }
 }

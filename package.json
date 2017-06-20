@@ -4,11 +4,12 @@
   "description": "An implementation of `Array.prototype.flatMap` as specified by Brian Terlson in https://github.com/bterlson/proposal-flatMap",
   "main": "index.js",
   "directories": {
-    "test": "test"
+    "test": "test",
+    "lib": "src"
   },
   "scripts": {
-    "test": "test",
-    "watch": "npm run babel --watch ./src/**.js --out-dir ./dist",
+    "start": "babel src/**.js --source-maps --out-dir dist/esm",
+    "test": "babel-node test/index.js",
     "babel": "babel"
   },
   "repository": {
@@ -22,10 +23,13 @@
   },
   "homepage": "https://github.com/aluanhaddad/flat-map#readme",
   "devDependencies": {
-    "eslint": "^3.19.0",
-    "eslint-rules-strict": "^1.0.0",
     "babel-cli": "^6.24.1",
+    "eslint": "^4.0.0",
+    "eslint-rules-strict": "^1.0.0",
     "babel-preset-esnext": "^1.1.3",
+    "babel-preset-es2017": "6.24.1",
+    "babel-preset-es2016": "6.24.1",
+    "babel-preset-es2015": "6.24.1",
     "tape": "^4.6.3"
   },
   "keywords": [

@@ -6,9 +6,8 @@ test('flatMap must apply the specified projection to each element of the resulin
   const xs = [[1, 5, 8], [2, 3]];
 
   const expected = [2, 6, 9, 3, 4];
-  const actual = xs.flatMap(function (x) {
-    return x.map(y => y + 1);
-  });
+  const actual = xs.flatMap(x => x.map(y => y + 1));
+
   deepEqual(actual, expected);
   end();
 });

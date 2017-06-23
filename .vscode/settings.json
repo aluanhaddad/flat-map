@@ -1,10 +1,14 @@
 // Place your settings in this file to overwrite default and user settings.
 {
+  "typescript.validate.enable": true,
   "eslint.autoFixOnSave": true,
-  "triggerTaskOnSave.on": true,
   "code-runner.executorMap": {
     "javascript": "babel-node"
   },
+  "code-runner.runInTerminal": true,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.showExecutionMessage": true,
+  "code-runner.defaultLanguage": "javascript",
   "triggerTaskOnSave.tasks": {
     "test": [
       "test/**.js"

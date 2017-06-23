@@ -3,13 +3,10 @@
   "version": "0.0.0",
   "description": "An implementation of `Array.prototype.flatMap` as specified by Brian Terlson in https://github.com/bterlson/proposal-flatMap",
   "main": "index.js",
-  "directories": {
-    "test": "test",
-    "lib": "src"
-  },
+  "typings": "index.d.ts",
   "scripts": {
+    "test": "babel-node test/index.js | faucet && tsc",
     "start": "babel src/**.js --source-maps --out-dir dist/esm",
-    "test": "babel-node test/index.js | faucet",
     "babel": "babel",
     "babel-node": "babel-node"
   },
@@ -28,7 +25,9 @@
     "babel-preset-latest": "^6.24.1",
     "eslint": "^4.0.0",
     "faucet": "^0.0.1",
-    "tape": "^4.6.3"
+    "tape": "^4.6.3",
+    "typescript": "^2.5.0-dev.20170623",
+    "proposal-flatmap": "git+https://github.com/bterlson/proposal-flatMap.git"
   },
   "keywords": [
     "flat-map",
@@ -39,8 +38,5 @@
     "projection",
     "combinators",
     "esnext"
-  ],
-  "dependencies": {
-    "proposal-flatmap": "git+https://github.com/bterlson/proposal-flatMap.git"
-  }
+  ]
 }

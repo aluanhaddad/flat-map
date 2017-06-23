@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "es2015",
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "rootDir": ".",
+    "outDir": "dist",
+    "noEmit": true,
+    "allowJs": true
+  },
+  "files": [
+    "index.d.ts",
+    "test/flat-map.ts"
+  ]
+}

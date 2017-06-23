@@ -1,10 +1,11 @@
 /**
- * @param {Array} target
- * @param {Array} source
+ * @template T, U
+ * @param {Array<U>} target
+ * @param {Array<T>} source
  * @param {number} start
  * @param {number} depth
- * @param {Function} mapperFunction
- * @param {Array} thisArg
+ * @param {function(T): U[]} mapperFunction
+ * @param {Array<T>} thisArg
  * @returns {number}
  */
 export default function flattenIntoArray(target, source, start, depth, mapperFunction, thisArg) {

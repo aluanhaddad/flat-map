@@ -1,6 +1,5 @@
 import test from 'tape';
-import '../src/shim';
-import '../src/flatten/shim';
+import '../src/flat-map';
 
 test('flatMap must apply the specified projection to each element of the resulting array', ({deepEqual, end}) => {
   const xs = [[1, 5, 8], [2, 3]];
@@ -16,7 +15,6 @@ test('flatMap must raise a `TypeError` exception if no callback is specified', (
   throws(() => {
     [].flatMap();
   }, TypeError);
-
   end();
 });
 

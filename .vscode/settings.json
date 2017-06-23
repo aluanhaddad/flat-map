@@ -2,6 +2,9 @@
 {
   "eslint.autoFixOnSave": true,
   "triggerTaskOnSave.on": true,
+  "code-runner.executorMap": {
+    "javascript": "babel-node"
+  },
   "triggerTaskOnSave.tasks": {
     "test": [
       "test/**.js"

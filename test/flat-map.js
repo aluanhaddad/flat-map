@@ -2,7 +2,7 @@ import test from 'tape';
 import '../src/shim';
 import '../src/flatten/shim';
 
-test('flatMap must apply the specified projection to each element of the resuling array', ({deepEqual, end}) => {
+test('flatMap must apply the specified projection to each element of the resulting array', ({deepEqual, end}) => {
   const xs = [[1, 5, 8], [2, 3]];
 
   const expected = [2, 6, 9, 3, 4];

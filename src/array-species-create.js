@@ -1,6 +1,4 @@
 export default function arraySpeciesCreate(originalArray, length) {
-  console.info({originalArray, length});
-  console.assert(Number.isSafeInteger(length) && length >= 0);
   const isArray = Array.isArray(originalArray);
   if (!isArray) {
     return Array(length);
@@ -9,7 +7,7 @@ export default function arraySpeciesCreate(originalArray, length) {
    * @type {ArrayConstructor|undefined|null} c
    */
   let C = Object.getPrototypeOf(originalArray).constructor;
-  if (C) { // If IsConstructor(C) is true... not sure how this can be reliably checked without invoking it. Likely not insignficant.
+  if (C) { // If IsConstructor(C) is true... not sure how this can be reliably checked without invoking it. Likely not insignificant.
     if (typeof C === 'object' || typeof C === 'function') {
       C = C[Symbol.species.toString()];
       C = C !== null ? C : undefined;

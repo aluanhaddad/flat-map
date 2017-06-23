@@ -9,8 +9,9 @@
   },
   "scripts": {
     "start": "babel src/**.js --source-maps --out-dir dist/esm",
-    "test": "babel-node test/index.js",
-    "babel": "babel"
+    "test": "babel-node test/index.js | faucet",
+    "babel": "babel",
+    "babel-node": "babel-node"
   },
   "repository": {
     "type": "git",
@@ -24,12 +25,9 @@
   "homepage": "https://github.com/aluanhaddad/flat-map#readme",
   "devDependencies": {
     "babel-cli": "^6.24.1",
+    "babel-preset-latest": "^6.24.1",
     "eslint": "^4.0.0",
-    "eslint-rules-strict": "^1.0.0",
-    "babel-preset-esnext": "^1.1.3",
-    "babel-preset-es2017": "6.24.1",
-    "babel-preset-es2016": "6.24.1",
-    "babel-preset-es2015": "6.24.1",
+    "faucet": "^0.0.1",
     "tape": "^4.6.3"
   },
   "keywords": [
@@ -38,9 +36,8 @@
     "map",
     "flatten",
     "concatenate",
-    "project",
+    "projection",
     "combinators",
-    "query",
     "esnext"
   ],
   "dependencies": {

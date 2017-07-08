@@ -24,7 +24,7 @@ export default function flattenIntoArray(target, source, start, depth, mapperFun
           element = mapperFunction.call(thisArg, element, sourceIndex, target);
         }
         const spreadable = Object.getOwnPropertySymbols(element).includes(Symbol.isConcatSpreadable) || Array.isArray(element);
-        if (spreadable === true && depth >= 0) {
+        if (spreadable === true && depth > 0) {
           const nextIndex = flattenIntoArray(target, element, targetIndex, depth - 1);
           targetIndex = nextIndex;
         } else {

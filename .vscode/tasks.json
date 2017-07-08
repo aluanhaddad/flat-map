@@ -1,18 +1,38 @@
 {
-  "version": "0.1.0",
+  "version": "2.0.0",
   "command": "npm",
-  "isShellCommand": true,
+  "type": "shell",
   "tasks": [
+    {
+      "taskName": "build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "command": "npm",
+      "args": [
+        "run",
+        "build"
+      ]
+    },
     {
       "command": "npm",
       "args": [
         "test"
       ],
-      "isBuildCommand": false,
-      "isTestCommand": true,
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": false,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
       "taskName": "test",
-      "echoCommand": false,
       "promptOnClose": false,
+      "type": "shell",
       "problemMatcher": {
         "applyTo": "allDocuments",
         "severity": "error",

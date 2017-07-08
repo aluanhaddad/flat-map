@@ -6,7 +6,8 @@
   "typings": "index.d.ts",
   "scripts": {
     "test": "babel-node test/index.js | faucet && tsc",
-    "start": "babel src/**.js --source-maps --out-dir dist/esm",
+    "start": "build",
+    "build": "babel --watch src/**.js --source-maps --out-dir dist/esm",
     "babel": "babel",
     "babel-node": "babel-node"
   },

@@ -19,5 +19,5 @@ interface Array<T> {
    * @returns {U[]} 
    * @memberof Array
    */
-  flatMap<U>(callbackfn: (value: T, index: number, array: T[]) => U[], thisArg?: any): U[];
+  flatMap<U>(callbackFn: (value: T, index: number, array: T[]) => U[], thisArg?: any): U[];
 }

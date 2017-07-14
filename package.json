@@ -5,6 +5,7 @@
   "main": "dist/cjs/index.js",
   "typings": "dist/cjs/index.d.ts",
   "scripts": {
+    "publish": "npm run validate && npm run build",
     "test": "babel-node",
     "validate": "babel-node test/index.js | faucet && tsc",
     "start": "build",

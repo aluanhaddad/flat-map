@@ -1,6 +1,6 @@
 {
   "name": "flat-map-polyfill",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "An implementation of `Array.prototype.flatMap` as specified by Brian Terlson in https://github.com/bterlson/proposal-flatMap",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",

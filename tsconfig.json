@@ -10,7 +10,7 @@
     "allowJs": true
   },
   "files": [
-    "index.d.ts",
+    "src/index.d.ts",
     "test/flat-map.ts"
   ]
 }

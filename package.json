@@ -3,10 +3,10 @@
   "version": "0.3.0",
   "description": "An implementation of `Array.prototype.flatMap` as specified by Brian Terlson in https://github.com/bterlson/proposal-flatMap",
   "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "directories": {
     "lib": "dist/cjs"
   },
-  "typings": "lib/index.d.ts",
   "scripts": {
     "prepublish": "npm run validate && npm run build",
     "test": "babel-node",

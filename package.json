@@ -2,17 +2,21 @@
   "name": "flat-map-polyfill",
   "version": "0.3.0",
   "description": "An implementation of `Array.prototype.flatMap` as specified by Brian Terlson in https://github.com/bterlson/proposal-flatMap",
-  "main": "dist/cjs/index.js",
-  "typings": "dist/cjs/index.d.ts",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "dist/cjs"
+  },
+  "typings": "lib/index.d.ts",
   "scripts": {
-    "publish": "npm run validate && npm run build",
+    "prepublish": "npm run validate && npm run build",
     "test": "babel-node",
     "validate": "babel-node test/index.js | faucet && tsc",
     "start": "build",
     "build": "npm run build-cjs",
     "build-cjs": "babel src --source-maps --out-dir dist/cjs && copy /Y src\\index.d.ts dist\\cjs",
     "babel": "babel",
-    "babel-node": "babel-node"
+    "babel-node": "babel-node",
+    "tsc": "tsc"
   },
   "repository": {
     "type": "git",
@@ -27,11 +31,11 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-preset-latest": "^6.24.1",
-    "eslint": "^4.0.0",
+    "eslint": "^4.2.0",
     "faucet": "^0.0.1",
-    "tape": "^4.6.3",
-    "typescript": "^2.5.0-dev.20170623",
-    "proposal-flatmap": "git+https://github.com/bterlson/proposal-flatMap.git"
+    "proposal-flatmap": "git+https://github.com/bterlson/proposal-flatMap.git",
+    "tape": "^4.7.0",
+    "typescript": "^2.5.0-dev.20170712"
   },
   "keywords": [
     "flat-map",

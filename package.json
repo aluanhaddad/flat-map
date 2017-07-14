@@ -10,7 +10,7 @@
   "scripts": {
     "prepublish": "npm run validate && npm run build",
     "test": "babel-node",
-    "validate": "babel-node test/index.js | faucet && tsc",
+    "validate": "babel-node test/index.js | faucet && npm run tsc",
     "start": "build",
     "build": "npm run build-cjs",
     "build-cjs": "babel src --source-maps --out-dir dist/cjs && copy /Y src\\index.d.ts dist\\cjs",

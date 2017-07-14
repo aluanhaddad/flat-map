@@ -1,4 +1,4 @@
-import '../index';
+import '../src/index';
 const xs = [0, 1, 2, 3];
 xs.flatMap(x => [x]).filter(x => x + 1);
 

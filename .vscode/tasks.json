@@ -24,10 +24,9 @@
       ]
     },
     {
-      "command": "npm",
+      "command": "babel-node",
       "args": [
-        "test",
-        "${fileDirname}/${fileBasenameNoExtension}"
+        "${relativeFile}"
       ],
       "group": {
         "kind": "test",

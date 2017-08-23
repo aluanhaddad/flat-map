@@ -6,7 +6,7 @@
   "typings": "dist/cjs/index.d.ts",
   "scripts": {
     "prepublish": "npm run validate && npm run build",
-    "test": "babel-node",
+    "test": "babel-node test/index.js",
     "validate": "babel-node test/index.js | faucet && npm run tsc",
     "start": "build",
     "build": "npm run build-cjs",
@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/aluanhaddad/flat-map#readme",
   "devDependencies": {
+    "@types/tape": "^4.2.30",
     "babel-cli": "^6.24.1",
     "babel-preset-latest": "^6.24.1",
     "eslint": "^4.2.0",

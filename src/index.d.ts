@@ -8,7 +8,7 @@ interface Array<T> {
    * @returns {T[]} 
    * @memberof Array
    */
-  flatten<T>(this: (T | T[] | this)[], depth?: number): T[];
+  flat<T>(this: (T | T[] | this)[], depth?: number): T[];
 
   /**
    * projects each element of the array into a new array and flattens the result.

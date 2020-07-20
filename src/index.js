@@ -1,2 +1,2 @@
-import './flatten';
+import './flat';
 import './flat-map';

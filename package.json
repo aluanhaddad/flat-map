@@ -30,7 +30,7 @@
     "babel-cli": "^6.24.1",
     "babel-preset-latest": "^6.24.1",
     "eslint": "^4.2.0",
-    "faucet": "^0.0.1",
+    "faucet": "^0.0.4",
     "proposal-flatmap": "git+https://github.com/bterlson/proposal-flatMap.git",
     "tape": "^4.7.0",
     "typescript": "^2.5.0-dev.20170712"
